@@ -98,12 +98,9 @@ public class OfflineExercises {
 	// endsDev("everoyonehatesdevforreal") → false
 	// endsDev("devisnotcool") → false
 
-//	public boolean endsDev(input) {
-//		if() {
-//			kept on giving me errors not allowing me to run rest of my code
-//		}
-//		return false;
-//	}
+	public boolean endsDev(String input) {
+		return false;
+	}
 
 
 
