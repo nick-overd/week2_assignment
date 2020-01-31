@@ -1,7 +1,5 @@
 package main;
 
-import java.util.ArrayList;
-
 public class OfflineExercises {
 
 	// Given a string, return a string where
@@ -16,9 +14,10 @@ public class OfflineExercises {
 		//String str = "apple";
 		//str.
 		//for every input repeat each unquie letter 3times
-		for(char i = input.charAt(0); i < input.length(); i++) {
-				System.out.println(input.charAt(0) + input.charAt(0) + input.charAt(0));
-				}
+//		for(char i = input.charAt(0); i < input.length(); i++) {
+//				System.out.println(input.charAt(0) + input.charAt(0) + input.charAt(0));
+//				}
+		return "yes";
 //			String.join(delimiter, elements)
 	}
 	
