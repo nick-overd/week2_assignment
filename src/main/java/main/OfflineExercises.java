@@ -41,7 +41,19 @@ public class OfflineExercises {
 	public String getBert(String input) {
 //		for(char i = input.charAt(0); i < input.length(); i++) {
 		//nope
-		return "";
+		String x = "";
+		if(input.toLowerCase().contains("bert")) {
+			if(input.toLowerCase().substring(input.toLowerCase().indexOf("bert") + 4 ).contains("bert")) {
+				String y = input.toLowerCase().substring(input.toLowerCase().indexOf("bert") + 4, input.toLowerCase().lastIndexOf("bert") );
+				//System.out.println(y);
+				for(int i = y.length() -1; i > -1; i--) {
+					x += y.toCharArray()[i];
+				}
+				//x+=y.toCharArray()[0];
+			}
+			
+		}
+		return x;
 	}
 
 	// Given three ints, a b c, one of them is small, one is medium and one is
@@ -100,7 +112,14 @@ public class OfflineExercises {
 	// endsDev("devisnotcool") → false
 
 	public boolean endsDev(String input) {
+		if(input.length() > 2) {
+			return input.toLowerCase().substring((input.length() -3), input.length()).equals("dev");
+			
+				
+		}
+		else {
 		return false;
+		}
 	}
 
 
@@ -125,7 +144,14 @@ public class OfflineExercises {
 	//amISearch("I have been in Amsterdam") → 0
 
 	public int amISearch(String arg1) {
-		return 0;
+		int count = 0;
+		String[] sentence=arg1.toLowerCase().split(" ");
+		for (int i=0; i < sentence.length; i++ ) {
+			if(sentence[i].equals("am")) {
+				count++;
+			}
+		}
+		return count;
 		
 	}
 	
@@ -175,9 +201,27 @@ public class OfflineExercises {
 	public int largest(String arg1) {
 		//switch statement might work
 //		ArrayList <String> row	= new ArrayList<String>();
-		//while loop in a while loop
+		//while loop in a while loop 
+		int temp = 0;
+		int max = 0;
+		for(int i=0; i < arg1.length();i++ ) {
+			System.out.println(temp);
+			System.out.println(i);
+			if(arg1.toCharArray()[i]== ' ') {
+				
+				if (temp>max) {
+					max=temp;
+				}
+				temp=0;
+			}else {
+				temp += Integer.parseInt(arg1.substring(i,i+1));
+			
+			}
+		}if (temp>max) {
+			max=temp;
+		}
 		
-		return 20;
+		return max;
 		
 	}
 	
