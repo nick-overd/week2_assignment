@@ -14,10 +14,16 @@ public class OfflineExercises {
 		//String str = "apple";
 		//str.
 		//for every input repeat each unquie letter 3times
-//		for(char i = input.charAt(0); i < input.length(); i++) {
-//				System.out.println(input.charAt(0) + input.charAt(0) + input.charAt(0));
-//				}
-		return "yes";
+		String x = "";
+		for( char z : input.toCharArray()) {
+			for(int i = 0; i < 3; i++ ) {
+				x+=z;
+			}
+			
+			
+		}
+		
+		return x;
 //			String.join(delimiter, elements)
 	}
 	
@@ -50,12 +56,7 @@ public class OfflineExercises {
 	// evenlySpaced(4, 60, 9) → false
 
 	public boolean evenlySpaced(int a, int b, int c) {
-		int d = (b-c);
-		int e = (a-b);
-		int d2 = (c-b);
-		int e2 = (b-a);
-		int f =(a-c);
-		int f2 = (c-a);
+		int d = (b-c); int e = (a-b); int d2 = (c-b); int e2 = (b-a); int f =(a-c); int f2 = (c-a);
 		if(a==d) {
 			return true;
 			}
@@ -174,7 +175,7 @@ public class OfflineExercises {
 	public int largest(String arg1) {
 		//switch statement might work
 //		ArrayList <String> row	= new ArrayList<String>();
-		
+		//while loop in a while loop
 		
 		return 20;
 		

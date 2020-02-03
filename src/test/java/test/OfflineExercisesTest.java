@@ -48,14 +48,14 @@ public class OfflineExercisesTest {
 		assertEquals("Choclate", oe.nMid("Chocolate", 1));
 	}
 
-//	@Test
-//	public void endsDev() {
-//		assertTrue(oe.endsDev("ihatedev"));
-//		assertTrue(oe.endsDev("endsDev"));
-//		assertFalse(oe.endsDev("jh"));
-//		assertFalse(oe.endsDev("cooev"));
-//		assertFalse(oe.endsDev("oddowiyhy"));
-//	}
+	@Test
+	public void endsDev() {
+		assertTrue(oe.endsDev("ihatedev"));
+		assertTrue(oe.endsDev("endsDev"));
+		assertFalse(oe.endsDev("jh"));
+		assertFalse(oe.endsDev("cooev"));
+		assertFalse(oe.endsDev("oddowiyhy"));
+	}
 
 	
 	@Test
