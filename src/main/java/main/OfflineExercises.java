@@ -19,7 +19,7 @@ public class OfflineExercises {
 			for(int i = 0; i < 3; i++ ) {
 				x+=z;
 			}
-			
+			// input.substring(0,1) + inputinput.substring(0,1)
 			
 		}
 		
@@ -101,8 +101,13 @@ public class OfflineExercises {
 
 	public String nMid(String input, int a) {
 //		remove.substring()
-		return "";
-	}
+			int len = input.length();
+			int midIndex = len/2;
+			int offset = a/2;
+			String oldStrStart = input.substring(0, (midIndex-offset));
+			String oldStrEnd = input.substring((len-midIndex+offset), len);
+			return oldStrStart+oldStrEnd;
+		}
 
 	// Given a string, return true if it ends in "dev". Ignore Case
 
@@ -132,7 +137,26 @@ public class OfflineExercises {
 	// superBlock("") → 0
 
 	public int superBlock(String input) {
-		return -1;
+		if (input.equals("") || input == null ) {
+			return 0;
+		}
+		int count = 1;
+		String lastLetter = "";
+		int maxcount = 1;
+		for( int i= 0; i < input.length(); i++) {
+			String letter = input.substring(i,i+1);
+			if(letter.equals(lastLetter)) {
+				count++;
+			}
+			else {
+				if(count > maxcount) {
+					maxcount = count;
+				}
+				count = 1;
+			}
+			lastLetter = letter;
+		}
+		return maxcount;
 
 	}
 	
@@ -167,10 +191,7 @@ public class OfflineExercises {
 	public String fizzBuzz(int arg1) {
 		int y = arg1;
 //		String y = String.valueOf(0)
-		if(y % -1 ==1) {
-			return "no negativity here please";
-		}
-		 else if(y % 15 ==0) {
+		if(y % 15 ==0) {
 			 return "fizzbuzz";
 		 }
 		else if(y % 3 ==0) {
